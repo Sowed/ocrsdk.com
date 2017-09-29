@@ -78,7 +78,7 @@
   $taskid = $arr["id"];  
   
   // 4. Get task information in a loop until task processing finishes
-  // 5. If response contains "Completed" staus - extract url with result
+  // 5. If response contains "Completed" status - extract url with result
   // 6. Download recognition result (text) and display it
 
   $url = $serviceUrl.'/getTaskStatus';
