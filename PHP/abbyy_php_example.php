@@ -1,6 +1,6 @@
 <?php
 
-  // 1. Send image to Cloud OCR SDK using processImage call
+  // 1. Send the image to Cloud OCR SDK using processImage call
   // 2.	Get response as xml
   // 3.	Read taskId from xml
 
@@ -17,7 +17,7 @@
 
   $serviceUrl = 'http://cloud.ocrsdk.com';
 
-  // Get path to file that we are going to recognize
+  // Get path to the file that we are going to recognize
   $local_directory=dirname(__FILE__).'/images/';
   $filePath = $local_directory.'/'.$fileName;
   if(!file_exists($filePath))
@@ -152,7 +152,7 @@
   $response = curl_exec($curlHandle);
   curl_close($curlHandle);
  
-  // Let user donwload rtf result
+  // Let the user donwload rtf result
   header('Content-type: application/rtf');
   header('Content-Disposition: attachment; filename="file.rtf"');
   echo $response;
